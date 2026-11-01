@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#7a1824">
 <meta name="description" content="Carta de Kotay'k, restaurante armenio en Los Corralitos, Mendoza. Menú fijo de 7 pasos, platos, postres, bebidas, contacto y ubicación.">
 <style>[hidden]{display:none!important}body{margin:0}</style>
 <title>Kotay'k Carta</title>
@@ -165,13 +166,15 @@ details .item b{font-size:1.2rem}
 }
 
 /* ---------- BARRA SUPERIOR ---------- */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(13,10,9,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:linear-gradient(180deg,#7a1824,#5e1019);border-bottom:1px solid rgba(226,173,143,.45);box-shadow:0 6px 24px rgba(0,0,0,.35)}
+body::before{background:#7a1824}
 .top .wrap{display:flex;align-items:center;gap:18px;padding-block:10px}
 .top-logo{width:96px;flex:none;cursor:pointer}
 .tabs{list-style:none;margin:0;padding:4px 0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;min-width:0;flex:1}
 .tabs::-webkit-scrollbar{display:none}
-.tabs a{display:block;white-space:nowrap;text-decoration:none;font-size:.9rem;padding:8px 15px;border-radius:999px;color:var(--humo);transition:color .2s,background .2s}
-.tabs a:hover{color:var(--crema)}
+@media (max-width:899px){.tabs{-webkit-mask-image:linear-gradient(90deg,transparent,#000 18px,#000 calc(100% - 18px),transparent);mask-image:linear-gradient(90deg,transparent,#000 18px,#000 calc(100% - 18px),transparent);padding-inline:14px}}
+.tabs a{display:block;white-space:nowrap;text-decoration:none;font-size:.9rem;padding:8px 15px;border-radius:999px;color:#efd6c8;transition:color .2s,background .2s}
+.tabs a:hover{color:#fff;background:rgba(255,255,255,.08)}
 .tabs a[aria-current="page"]{background:var(--cobre);color:#1b0f0b}
 @media (min-width:900px){.tabs{justify-content:flex-end}}
 
